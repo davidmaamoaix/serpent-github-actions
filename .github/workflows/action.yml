@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -17,10 +17,9 @@ jobs:
 
     - name: Install Serpent
       run: |
-        wget -O serpent-src.zip https://sourceforge.net/projects/serpent/files/418/serpent-src-418.zip/download
-        unzip serpent-src.zip
-        cd serpent/64bit
-        cmake .
-        make serpent64
+        curl -L https://sourceforge.net/projects/serpent/files/418/serpent64-mac-418.zip/download
+        unzip serpent64-mac-418.zip
+        cd serpent
+        ./serpent64
 
 
