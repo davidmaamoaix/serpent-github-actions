@@ -20,6 +20,7 @@ jobs:
         curl -L https://sourceforge.net/projects/serpent/files/418/serpent64-mac-418.zip/download --output serpent-mac.zip
         unzip serpent-mac.zip
         cd serpent
-        ./serpent64
+        export PATH=$PATH:$(pwd)
+        export SERPENTPATH="$(pwd)/lib:$(pwd)/programs:$(pwd)/wxslib"
 
 
