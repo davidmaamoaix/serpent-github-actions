@@ -1,0 +1,26 @@
+name: Serpent Installation
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        submodules: recursive
+
+    - name: Install Serpent
+      run: |
+        wget -O serpent-src.zip https://sourceforge.net/projects/serpent/files/418/serpent-src-418.zip/download
+        unzip serpent-src.zip
+        cd serpent/64bit
+        cmake .
+        make serpent64
+
+
