@@ -22,6 +22,3 @@ jobs:
         cd serpent
         export PATH=$PATH:$(pwd)
         export SERPENTPATH="$(pwd)/lib:$(pwd)/programs:$(pwd)/wxslib"
-        serpent64
-
-
