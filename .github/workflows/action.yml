@@ -17,8 +17,8 @@ jobs:
 
     - name: Install Serpent
       run: |
-        curl -L https://sourceforge.net/projects/serpent/files/418/serpent64-mac-418.zip/download
-        unzip serpent64-mac-418.zip
+        curl -L https://sourceforge.net/projects/serpent/files/418/serpent64-mac-418.zip/download --output serpent-mac.zip
+        unzip serpent-mac.zip
         cd serpent
         ./serpent64
 
